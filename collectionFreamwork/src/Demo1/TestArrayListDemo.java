@@ -7,7 +7,7 @@ import java.util.List;
 public class TestArrayListDemo {
 	public static void main(String[] args) {
 		
-		      String stringObj1 = new String("Rajan");
+		      String stringObj1 = new String("Raju");
 		      String stringObj2 = new String("Seema"); 
 		      String stringObj3 = new String("Shalu");
 		      String stringObj4 = new String("Tannu");
