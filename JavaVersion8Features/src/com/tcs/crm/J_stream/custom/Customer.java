@@ -29,9 +29,8 @@ public class Customer {
 	@Override
 	public String toString() {
 		return "Customer [Customerid=" + Customerid + ", Customername=" + Customername + ", customersalary="
-				+ customersalary + ", getCustomerid()=" + getCustomerid() + ", getCustomername()=" + getCustomername()
-				+ ", getCustomersalary()=" + getCustomersalary() + ", getClass()=" + getClass() + ", hashCode()="
-				+ hashCode() + ", toString()=" + super.toString() + "]";
+				+ customersalary + "]";
 	}
+	
 }
 

@@ -15,27 +15,31 @@ public class ClientCustomer {
 		Customer customerList8 = new Customer(8, "Saloni", 35000);
 		Customer customerList9 = new Customer(9, "Meera", 32000);
 		Customer customerList10 = new Customer(10, "Veer", 40000);
-		List<Customer> Listobj = new  ArrayList<>();
-		Listobj.add(customerList10);
-		Listobj.add(customerList9);
-		Listobj.add(customerList8);
-		Listobj.add(customerList7);
-		Listobj.add(customerList6);
-		Listobj.add(customerList5);
-		Listobj.add(customerList4);
-		Listobj.add(customerList3);
-		Listobj.add(customerList2);
-		Listobj.add(customerList1);
-		System.out.println("size of the list " + Listobj.size());
+		List<Customer> listObj = new  ArrayList<>();
+		listObj.add(customerList1);
+		listObj.add(customerList2);
+		listObj.add(customerList3);
+		listObj.add(customerList4);
+		listObj.add(customerList5);
+		listObj.add(customerList6);
+		listObj.add(customerList7);
+		listObj.add(customerList8);
+		listObj.add(customerList9);
+		listObj.add(customerList10);
+		for(Customer res :  listObj) {
+			System.out.println(res);
+		}
+		System.out.println("size of the list " + listObj.size());
 		Comparator<Customer> Comparingnamesalary = Comparator.comparing(Customer :: getCustomername)
 				.thenComparing(Customer :: getCustomersalary);
-		List<Customer> collectList = Listobj.stream()
+		List<Customer> collectList = listObj.stream()
 				.filter(c->c.getCustomername().startsWith("s"))
 				.sorted(Comparingnamesalary)
-				.distinct()
 				.collect(Collectors.toList());
-		for(Customer cusobj :collectList) {
-			System.out.println(cusobj.getCustomerid() +":"+ cusobj.getCustomername() +":"+ cusobj.getCustomersalary());
+			
+		
+		for(Customer cusobj : collectList) {
+			System.out.println("Message"+cusobj.getCustomerid() +":"+ cusobj.getCustomername() +":"+ cusobj.getCustomersalary());
 		}
 	}
 }
